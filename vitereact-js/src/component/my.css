@@ -4,3 +4,26 @@
     border-radius: 50%;
     padding: 5px;
 }
+
+.super-form {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.invalid {
+    border: 1px solid red;
+
+}
+
+button {
+    cursor: pointer;
+}
+
+input {
+    border: none;
+    outline: none;
+    height: 25px;
+    border-radius: 3px;
+    margin-bottom: 5px;
+}

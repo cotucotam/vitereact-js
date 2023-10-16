@@ -1,42 +1,60 @@
-import { useState } from 'react'
+// import { useState } from 'react'
+// import logo from './logo.svg'
+// import './App.css'
+// import MyComponent from './component/MyComponent'
+
+// // jsx viet html trong jx
+
+// function App() {
+//   const [count, setCount] = useState(0)
+//   const [name, setName] = useState("")
+//   const [info, setInfo] = useState("")
+//   const handleOnClick = () => {
+//     console.log("Hello")
+//     setInfo(name)
+//   }
+//   const nameTempt = { name: "cotam" }
+//   return (
+//     <div className="App">
+//       <header className="App-header" style={{ color: 'red', paddingTop: 'auto' }}>
+//         <MyComponent count={10} />
+//         <br />
+//         <MyComponent count={11} />
+//         <br />
+//         <MyComponent count={12} />
+//         <br />
+//         <MyComponent count={13} />
+//         <br />
+//         <img src={logo} className="App-logo" alt="logo" />
+//         <input type='text' value={name} onChange={(event) => setName(event.target.value)} />
+//         <button onClick={() => handleOnClick()}>Click me</button>
+//         <p>Hello world {name}</p>
+//         <p>Hello world {JSON.stringify(nameTempt)}</p>
+//         <p>Hello world {info}</p>
+
+//       </header>
+
+//     </div >
+//   )
+// }
+
+// export default App
+
+
 import logo from './logo.svg'
 import './App.css'
-import MyComponent from './component/MyComponent'
-
-// jsx viet html trong jx
-
+import SuperForm2 from './component/hooks/SuperForm2'
 function App() {
-  const [count, setCount] = useState(0)
-  const [name, setName] = useState("")
-  const [info, setInfo] = useState("")
-  const handleOnClick = () => {
-    console.log("Hello")
-    setInfo(name)
-  }
-  const nameTempt = { name: "cotam" }
   return (
-    <div className="App">
-      <header className="App-header" style={{ color: 'red', paddingTop: 'auto' }}>
-        <MyComponent count={10} />
-        <br />
-        <MyComponent count={11} />
-        <br />
-        <MyComponent count={12} />
-        <br />
-        <MyComponent count={13} />
-        <br />
+    <div className='App' style={{ color: 'red' }}>
+      <header className='App-header'>
         <img src={logo} className="App-logo" alt="logo" />
-        <input type='text' value={name} onChange={(event) => setName(event.target.value)} />
-        <button onClick={() => handleOnClick()}>Click me</button>
-        <p>Hello world {name}</p>
-        <p>Hello world {JSON.stringify(nameTempt)}</p>
-        <p>Hello world {info}</p>
-
+        <SuperForm2 />
+        <SuperForm2 />
+        <SuperForm2 />
       </header>
 
-    </div >
+    </div>
   )
 }
-
 export default App
-
