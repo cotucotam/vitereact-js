@@ -41,17 +41,33 @@
 // export default App
 
 
+// import logo from './logo.svg'
+// import './App.css'
+// import SuperForm2 from './component/hooks/SuperForm2'
+// function App() {
+//   return (
+//     <div className='App' style={{ color: 'red' }}>
+//       <header className='App-header'>
+//         <img src={logo} className="App-logo" alt="logo" />
+//         <SuperForm2 />
+//         <SuperForm2 />
+//         <SuperForm2 />
+//       </header>
+
+//     </div>
+//   )
+// }
+// export default App
+
 import logo from './logo.svg'
 import './App.css'
-import SuperForm2 from './component/hooks/SuperForm2'
+import TestAudio from './component/hooks/TestAudio'
 function App() {
   return (
     <div className='App' style={{ color: 'red' }}>
       <header className='App-header'>
         <img src={logo} className="App-logo" alt="logo" />
-        <SuperForm2 />
-        <SuperForm2 />
-        <SuperForm2 />
+        <TestAudio />
       </header>
 
     </div>
