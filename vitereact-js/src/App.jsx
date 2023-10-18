@@ -59,15 +59,31 @@
 // }
 // export default App
 
+// import logo from './logo.svg'
+// import './App.css'
+// import TestAudio from './component/hooks/TestAudio'
+// function App() {
+//   return (
+//     <div className='App' style={{ color: 'red' }}>
+//       <header className='App-header'>
+//         <img src={logo} className="App-logo" alt="logo" />
+//         <TestAudio />
+//       </header>
+
+//     </div>
+//   )
+// }
+// export default App
+
 import logo from './logo.svg'
 import './App.css'
-import TestAudio from './component/hooks/TestAudio'
+import SupperInput from './component/customize/SupperInput'
 function App() {
   return (
     <div className='App' style={{ color: 'red' }}>
       <header className='App-header'>
         <img src={logo} className="App-logo" alt="logo" />
-        <TestAudio />
+        <SupperInput />
       </header>
 
     </div>
