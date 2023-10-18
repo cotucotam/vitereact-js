@@ -14,7 +14,7 @@ const TestAudio = () => {
         audioRef.current.pause()
     }
     return (
-        <div>
+        <div className="test-audio">
             <Music ref={audioRef} />
             <button onClick={() => hanlePlay()}>play</button>
             <button onClick={() => hanlePause()}>pause</button>
