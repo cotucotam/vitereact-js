@@ -91,23 +91,48 @@
 // }
 // export default App
 
+// import logo from './logo.svg'
+// import './App.css'
+// import SupperInput from './component/customize/SupperInput'
+// import ErrorBoundaries from './component/ErrorBoundaries/ErrorBoundaries'
+// function App() {
+
+//   return (
+//     <ErrorBoundaries >
+//       <div className='App' style={{ color: 'red' }}>
+//         <header className='App-header'>
+//           <img src={logo} className="App-logo" alt="logo" />
+//           <SupperInput />
+
+//         </header>
+
+//       </div>
+//     </ErrorBoundaries>
+//   )
+// }
+// export default App
+
 import logo from './logo.svg'
 import './App.css'
-import SupperInput from './component/customize/SupperInput'
+// import SupperInput from './component/customize/SupperInput'
+
 import ErrorBoundaries from './component/ErrorBoundaries/ErrorBoundaries'
+import { Suspense, lazy } from 'react'
+const SupperInput = lazy(() => import('./component/customize/SupperInput'))
 function App() {
 
   return (
     <ErrorBoundaries >
       <div className='App' style={{ color: 'red' }}>
-        <header className='App-header'>
-          <img src={logo} className="App-logo" alt="logo" />
-          <SupperInput />
+        <Suspense fallback={<div>Loading ...</div>}>
+          <header className='App-header'>
+            <img src={logo} className="App-logo" alt="logo" />
+            <SupperInput />
 
-        </header>
-
+          </header>
+        </Suspense>
       </div>
-    </ErrorBoundaries>
+    </ErrorBoundaries >
   )
 }
 export default App
