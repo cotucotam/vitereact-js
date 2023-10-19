@@ -112,27 +112,46 @@
 // }
 // export default App
 
+// import logo from './logo.svg'
+// import './App.css'
+// // import SupperInput from './component/customize/SupperInput'
+
+// import ErrorBoundaries from './component/ErrorBoundaries/ErrorBoundaries'
+// import { Suspense, lazy } from 'react'
+// const SupperInput = lazy(() => import('./component/customize/SupperInput'))
+// function App() {
+
+//   return (
+//     <ErrorBoundaries >
+//       <div className='App' style={{ color: 'red' }}>
+//         <Suspense fallback={<div>Loading ...</div>}>
+//           <header className='App-header'>
+//             <img src={logo} className="App-logo" alt="logo" />
+//             <SupperInput />
+
+//           </header>
+//         </Suspense>
+//       </div>
+//     </ErrorBoundaries >
+//   )
+// }
+// export default App
+
 import logo from './logo.svg'
 import './App.css'
 // import SupperInput from './component/customize/SupperInput'
 
-import ErrorBoundaries from './component/ErrorBoundaries/ErrorBoundaries'
-import { Suspense, lazy } from 'react'
-const SupperInput = lazy(() => import('./component/customize/SupperInput'))
+import Parent from './component/childrenandparent/Parent'
 function App() {
 
   return (
-    <ErrorBoundaries >
-      <div className='App' style={{ color: 'red' }}>
-        <Suspense fallback={<div>Loading ...</div>}>
-          <header className='App-header'>
-            <img src={logo} className="App-logo" alt="logo" />
-            <SupperInput />
+    <div className='App' style={{ color: 'red' }}>
+      <header className='App-header'>
+        <img src={logo} className="App-logo" alt="logo" />
+        <Parent />
+      </header>
 
-          </header>
-        </Suspense>
-      </div>
-    </ErrorBoundaries >
+    </div>
   )
 }
 export default App

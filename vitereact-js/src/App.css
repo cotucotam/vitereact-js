@@ -32,6 +32,7 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
@@ -39,4 +40,20 @@
 
 button {
   font-size: calc(10px + 2vmin);
+}
+
+.parnent {
+  height: 300px;
+  border: 1px solid #61dafb;
+  border-radius: 10px;
+  width: 500px;
+  padding: 15px;
+}
+
+.child {
+  margin-top: 15px;
+  padding: 15px;
+  height: 100px;
+  border: 1px solid greenyellow;
+  border-radius: 10px
 }
