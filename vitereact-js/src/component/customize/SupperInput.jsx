@@ -2,7 +2,8 @@ import React from 'react';
 import HideShowInput from './HideShowInput';
 const SupperInput = () => {
     const role = "user"
-
+    const test = {}
+    console.log(test.test.test)
     return (
         <>
             {/* <div className='form-group'>

@@ -75,18 +75,39 @@
 // }
 // export default App
 
+// import logo from './logo.svg'
+// import './App.css'
+// import SupperInput from './component/customize/SupperInput'
+// function App() {
+//   return (
+//     <div className='App' style={{ color: 'red' }}>
+//       <header className='App-header'>
+//         <img src={logo} className="App-logo" alt="logo" />
+//         <SupperInput />
+//       </header>
+
+//     </div>
+//   )
+// }
+// export default App
+
 import logo from './logo.svg'
 import './App.css'
 import SupperInput from './component/customize/SupperInput'
+import ErrorBoundaries from './component/ErrorBoundaries/ErrorBoundaries'
 function App() {
-  return (
-    <div className='App' style={{ color: 'red' }}>
-      <header className='App-header'>
-        <img src={logo} className="App-logo" alt="logo" />
-        <SupperInput />
-      </header>
 
-    </div>
+  return (
+    <ErrorBoundaries >
+      <div className='App' style={{ color: 'red' }}>
+        <header className='App-header'>
+          <img src={logo} className="App-logo" alt="logo" />
+          <SupperInput />
+
+        </header>
+
+      </div>
+    </ErrorBoundaries>
   )
 }
 export default App
