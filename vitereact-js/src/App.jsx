@@ -137,18 +137,37 @@
 // }
 // export default App
 
+// import logo from './logo.svg'
+// import './App.css'
+// // import SupperInput from './component/customize/SupperInput'
+
+// import Parent from './component/childrenandparent/Parent'
+// function App() {
+
+//   return (
+//     <div className='App' style={{ color: 'red' }}>
+//       <header className='App-header'>
+//         <img src={logo} className="App-logo" alt="logo" />
+//         <Parent />
+//       </header>
+
+//     </div>
+//   )
+// }
+// export default App
+
 import logo from './logo.svg'
 import './App.css'
 // import SupperInput from './component/customize/SupperInput'
 
-import Parent from './component/childrenandparent/Parent'
+import MyTabs from './component/childrenandparent/MyTabs'
 function App() {
 
   return (
     <div className='App' style={{ color: 'red' }}>
       <header className='App-header'>
         <img src={logo} className="App-logo" alt="logo" />
-        <Parent />
+        <MyTabs />
       </header>
 
     </div>

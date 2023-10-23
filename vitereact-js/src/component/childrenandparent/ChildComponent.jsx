@@ -1,22 +1,37 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, forwardRef, useImperativeHandle } from 'react';
 import { emitter } from './Emitter';
 
-const ChildComponent = (props) => {
-    useEffect(() => {
-        emitter.on("test", () => {
-            fireChildFunction()
-        })
-    }, [])
+const ChildComponent = (props, ref) => {
+    // useEffect(() => {
+    //     emitter.on("test", () => {
+    //         fireChildFunction()
+    //     })
+    // }, [])
+    // const fireChildFunction = () => {
+    //     props.parentFunc2()
+    // }
+    // useEffect(() => {
+    //     emitter.on("test", (data) => {
+    //         fireChildFunction(data)
+    //     })
+    // }, [])
 
-    const fireChildFunction = () => {
-        props.parentFunc2("cotam dang lam paren - child")
-    }
+    // const fireChildFunction = (data) => {
+    //     props.parentFunc2(data)
+    // }
+
     const callYourParent = () => {
         props.parentFunc()
     }
     const callYourParent2 = () => {
         props.parentFunc2("cotam dang lam child - parent")
     }
+    useImperativeHandle(ref, () => ({
+        fireChildFunction() {
+            alert("cotam dang lam parent - child")
+        }
+
+    }))
     return (
         <div className='child'>
             I am a children
@@ -27,4 +42,4 @@ const ChildComponent = (props) => {
     );
 };
 
-export default ChildComponent;
+export default forwardRef(ChildComponent);

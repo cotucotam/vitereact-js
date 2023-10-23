@@ -57,3 +57,18 @@ button {
   border: 1px solid greenyellow;
   border-radius: 10px
 }
+
+.tabs {
+  margin-bottom: 20px;
+  display: block;
+}
+
+span {
+  padding: 15px;
+  cursor: pointer;
+}
+
+.active {
+  color: red;
+  border-bottom: 2px solid green;
+}
