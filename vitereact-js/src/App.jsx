@@ -175,18 +175,36 @@
 // }
 // export default App
 
+// import logo from './logo.svg'
+// import './App.css'
+
+// import TodoLIst from './component/hooks/callback/TodoLIst'
+// function App() {
+
+//   return (
+//     <div className='App' style={{ color: 'red' }}>
+//       <header className='App-header'>
+//         <img src={logo} className="App-logo" alt="logo" />
+//         <TodoLIst />
+//       </header>
+
+//     </div>
+//   )
+// }
+// export default App
+
+
 import logo from './logo.svg'
 import './App.css'
-// import SupperInput from './component/customize/SupperInput'
-
-import TodoLIst from './component/hooks/callback/TodoLIst'
+import SupperInput from './component/customize/SupperInput'
 function App() {
-
   return (
     <div className='App' style={{ color: 'red' }}>
       <header className='App-header'>
         <img src={logo} className="App-logo" alt="logo" />
-        <TodoLIst />
+        <div className='super-input-container'>
+          <SupperInput />
+        </div>
       </header>
 
     </div>

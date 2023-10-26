@@ -3,7 +3,7 @@
 }
 
 .App-logo {
-  height: 40vmin;
+  height: 15vmin;
   pointer-events: none;
 }
 
@@ -71,4 +71,11 @@ span {
 .active {
   color: red;
   border-bottom: 2px solid green;
+}
+
+.super-input-container {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  padding: 10px;
 }

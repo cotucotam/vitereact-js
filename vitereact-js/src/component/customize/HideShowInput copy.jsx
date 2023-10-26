@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
 
 const HideShowInput = (props) => {
-    console.log("check props")
+    console.log("check props", props)
     const { name, role } = props
-    // console.log("check name, role")
+    console.log("check name, role", name, role)
     const [IsShow, setIsShow] = useState(false)
     const arrUser = ["name", "email"]
     const arrLeader = ["name", "email", "address"]
@@ -21,7 +21,5 @@ const HideShowInput = (props) => {
         </>
     );
 };
-const areEqual = (prevProps, nextProps) => {
-    return prevProps.valueInput === nextProps.valueInput
-}
-export default React.memo(HideShowInput, areEqual);
+
+export default HideShowInput;
