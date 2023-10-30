@@ -16,8 +16,12 @@ const TodoLIst = (props) => {
     // })
 
     const addNewTodo = useCallback((todo) => {
-        setTodos((todos) => [...todos, todo])//(todos) => [...todos, todo] truy cap gia tri qua khu cua todos
-    }, [])
+        setTodos([...todos, todo])//(todos) => [...todos, todo] truy cap gia tri qua khu cua todos
+    }, [todos])
+
+    // const addNewTodo = useCallback((todo) => {
+    //     setTodos((todos) => [...todos, todo])//(todos) => [...todos, todo] truy cap gia tri qua khu cua todos
+    // }, [])
 
     const handleCount = () => {
         setCount(Math.floor(Math.random() * 10))
@@ -29,6 +33,15 @@ const TodoLIst = (props) => {
     //     }
     //     return result
     // })
+
+    const heavyFunction = useMemo(() => {
+        let result = 0
+        for (let i = 0; i < 1000000000; i++) {
+            result += i
+        }
+        return result
+    }, [])
+    const supperVar = heavyFunction
     return (
         <>
             {todos && todos.length > 0 &&
@@ -47,6 +60,7 @@ const TodoLIst = (props) => {
                 </button>
                 My total are: {count}
             </div>
+            <div>supperVar: {supperVar}</div>
         </>
     );
 };
